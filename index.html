@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>index</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" type="text/javascript"></script>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#introduction-to-symbolic-computation-with-mxnet-and-julia-programming-language">Introduction to symbolic computation with MXNet and Julia programming language</a>
+<ul>
+<li><a href="#installation">Installation</a>
+<ul>
+<li><a href="#installing-julia">installing Julia</a></li>
+<li><a href="#installing-mxnet">Installing MXNet</a></li>
+<li><a href="#install-julia-extension-on-visual-studio-code">Install Julia Extension on Visual Studio Code</a></li>
+</ul></li>
+<li><a href="#basic-operations">Basic Operations</a>
+<ul>
+<li><a href="#addition">Addition</a></li>
+<li><a href="#multiplication">Multiplication</a></li>
+<li><a href="#power">Power</a></li>
+<li><a href="#gradient">Gradient</a></li>
+</ul></li>
+<li><a href="#finding-a-minimum-of-scalar-quadratic-function">Finding a Minimum of Scalar Quadratic Function</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="introduction-to-symbolic-computation-with-mxnet-and-julia-programming-language">Introduction to symbolic computation with MXNet and Julia programming language</h1>
+<p>MXNet is a framework for machine learning. The popularity of MXNet continues to increase. MXNet provides an eager execution mode and a static graph mode. We explore a creation of symbolic graph with primitive functions. Besides, Julia uses just in time compiling that make Julia faster than Python.</p>
+<h2 id="installation">Installation</h2>
+<h3 id="installing-julia">installing Julia</h3>
+<p>We need to download the installer <a href="https://julialang.org/downloads/">here</a>. We need also to add Julia on a path to make it accessible from the shell, the powershell, or the cmd. The executable is located on <code>c:\users\user\.julia\bin</code> for Windows. We need to replace <code>user</code> by our user’s name. We can also download a script <a href="https://github.com/abelsiqueira/jill">here</a> to install Julia easily on Linux.</p>
+<h3 id="installing-mxnet">Installing MXNet</h3>
+<p>It is very easy to install MXNet. We just import the module <code>Pkg</code> and install MXNet.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">import</span> Pkg</span>
+<span id="cb1-2"><a href="#cb1-2"></a>Pkg.add(<span class="st">&quot;MXNet&quot;</span>)</span></code></pre></div>
+<h3 id="install-julia-extension-on-visual-studio-code">Install Julia Extension on Visual Studio Code</h3>
+<p>We search the extension of Julia on Visual Studio Code with its id. The id of Julia extension is given by “<a href="https://marketplace.visualstudio.com/items?itemName=julialang.language-julia">julialang.language-julia</a>”. We can download the extension directly from a <a href="https://marketplace.visualstudio.com/items?itemName=julialang.language-julia">market place</a> as second alternative.</p>
+<h2 id="basic-operations">Basic Operations</h2>
+<p>The fast way of mastering anything is to begin with easy examples. We can increase the challenge little by little in each loop of learning. We will view the way of performing graph computation with MXNet.</p>
+<h3 id="addition">Addition</h3>
+<p>The first step is to import MXNet in current namespace. You can access to objects inside MXNet without each time specifying the name of module.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">using</span> MXNet</span></code></pre></div>
+<p>The second step is to create two symbolic variables <code>x</code> and <code>y</code></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb3-1"><a href="#cb3-1"></a>x<span class="op">=</span>mx.Variable(<span class="op">:</span>x)</span>
+<span id="cb3-2"><a href="#cb3-2"></a>y<span class="op">=</span>mx.Variable(<span class="op">:</span>y)</span></code></pre></div>
+<p><code>:x</code> is Julia symbol. The variable <code>x</code> will be identified by this symbol. The symbol in Julia is like some kind of constant string. The function <code>mx.Variable</code> creates symbolic variable.</p>
+<p>The third step is to add the two variables by creating new symbolic node:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb4-1"><a href="#cb4-1"></a>z<span class="op">=</span> x .<span class="op">+</span> y</span></code></pre></div>
+<p>The operation <code>.+</code> is element-wise addition.</p>
+<p>The fourth step is to create dictionary that will link numerical values to symbolic variables.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb5-1"><a href="#cb5-1"></a>args<span class="op">=</span><span class="dt">Dict</span>(<span class="op">:</span>x <span class="op">=&gt;</span> mx.NDArray([<span class="fl">4</span>])<span class="op">,</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a>          <span class="op">:</span>y <span class="op">=&gt;</span> mx.NDArray([<span class="fl">5</span>]))</span></code></pre></div>
+<p>We give a value of four to variable <span class="math inline">\(x\)</span>, and a value of five to variable <span class="math inline">\(y\)</span>. All operations are tensor oriented. It requires to embed even scalar value in array. <code>mx.NDArray([4])</code> creates an array that has only one element. Similarly, <code>mx.NDArray([5])</code> creates an array containing only one element.</p>
+<p>The fifth step is to create an executor by providing a symbolic expression. The executor will be able to evaluate the symbolic expression with provided value in dictionary. The following line creates an executor:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb6-1"><a href="#cb6-1"></a>executor<span class="op">=</span>mx.bind(z<span class="op">,</span>mx.cpu()<span class="op">,</span>args)</span></code></pre></div>
+<p>The first argument is our symbolic expression that we want to evaluate. The second argument is device that will execute the instructions. In this case, the CPU will execute the instructions. The third argument is the dictionary that links input symbolic nodes to their numerical values.</p>
+<p>The sixth step is to evaluate the expression by calling the method <code>forward</code> like this:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb7-1"><a href="#cb7-1"></a>outs<span class="op">=</span>mx.forward(executor<span class="op">,</span>is_train<span class="op">=</span><span class="ex">false</span>)</span></code></pre></div>
+<p>The first argument is the executor and the second argument indicates that we make inference only.</p>
+<p>The finally step is to print evaluated value on screen. This step is unnecessary if you executing instruction by instruction from Julia command line. However, it is good habit to put all instructions in file because we can come back later. We build also your own library of snippets. Snippets help to accelerate coding on big project because we will simply aggregate the right snippets.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb8-1"><a href="#cb8-1"></a>println(outs)</span></code></pre></div>
+<p>We can verify that the result is nine.</p>
+<h3 id="multiplication">Multiplication</h3>
+<p>The operator <code>.*</code>is element wise multiplication. We can use the precedent example and replace the addition operator by multiplication operator.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">using</span> MXNet</span>
+<span id="cb9-2"><a href="#cb9-2"></a>x<span class="op">=</span>mx.Variable(<span class="op">:</span>x)</span>
+<span id="cb9-3"><a href="#cb9-3"></a>y<span class="op">=</span>mx.Variable(<span class="op">:</span>y)</span>
+<span id="cb9-4"><a href="#cb9-4"></a>z<span class="op">=</span>x <span class="op">.*</span> y</span>
+<span id="cb9-5"><a href="#cb9-5"></a>args<span class="op">=</span><span class="dt">Dict</span>(<span class="op">:</span>x <span class="op">=&gt;</span> mx.NDArray([<span class="fl">4</span>])<span class="op">,</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a>          <span class="op">:</span>y <span class="op">=&gt;</span> mx.NDArray([<span class="fl">5</span>]))</span>
+<span id="cb9-7"><a href="#cb9-7"></a>executor<span class="op">=</span>mx.bind(z<span class="op">,</span>mx.cpu()<span class="op">,</span>args)</span>
+<span id="cb9-8"><a href="#cb9-8"></a>outs<span class="op">=</span>mx.forward(executor<span class="op">,</span>is_train<span class="op">=</span><span class="ex">false</span>)</span>
+<span id="cb9-9"><a href="#cb9-9"></a>println(outs)</span></code></pre></div>
+<p>We can verify the result is twenty.</p>
+<h3 id="power">Power</h3>
+<p>As example, we have to compute <span class="math inline">\(y=x^3\)</span>. The operation will translate as <code>y=x .^ 3</code> in Julia programming language. The operator <code>.^</code> is element wise power by scalar value.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb10-1"><a href="#cb10-1"></a><span class="kw">using</span> MXNet</span>
+<span id="cb10-2"><a href="#cb10-2"></a>x<span class="op">=</span>mx.Variable(<span class="op">:</span>x)</span>
+<span id="cb10-3"><a href="#cb10-3"></a>y<span class="op">=</span>x <span class="op">.^</span> <span class="fl">3</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a>args<span class="op">=</span><span class="dt">Dict</span>(<span class="op">:</span>x <span class="op">=&gt;</span> mx.NDArray([<span class="fl">2</span>]))</span>
+<span id="cb10-5"><a href="#cb10-5"></a>executor<span class="op">=</span>mx.bind(y<span class="op">,</span>mx.cpu()<span class="op">,</span>args)</span>
+<span id="cb10-6"><a href="#cb10-6"></a>outs<span class="op">=</span>mx.forward(executor<span class="op">,</span>is_train<span class="op">=</span><span class="ex">false</span>)</span>
+<span id="cb10-7"><a href="#cb10-7"></a>println(outs)</span></code></pre></div>
+<p>We can verify that the result is eight.</p>
+<h3 id="gradient">Gradient</h3>
+<p>Automatic differentiation is at heart of modern machine learning. A gradient is vector of derivatives. Each component of a gradient represents the derivative of scalar function with respect to one independent variable. We obtain the derivative by applying the chain rule. As example, we make an assumption that we have function <span class="math inline">\(f[g(h(x))]\)</span> of others functions. By applying chain rule, we obtain the derivative of <span class="math inline">\(f\)</span> with respect to x as given:</p>
+<p><span class="math inline">\(\frac{\partial f}{\partial x}=\frac{\partial f}{\partial g} \frac{\partial g}{\partial h} \frac{\partial h}{\partial x}\)</span></p>
+<p>The derivative of <span class="math inline">\(f\)</span> with respect to x will be calculated in four steps. We calculate the derivative of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(g\)</span>, the derivative of <span class="math inline">\(g\)</span> with respect to <span class="math inline">\(h\)</span>, the derivative of <span class="math inline">\(h\)</span> with respect to <span class="math inline">\(x\)</span>. Finally, we will make the product of three terms for obtaining the derivative of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(x\)</span>. The chain rule brings modularity on calculus of derivatives. We begin by the top function and we finish the bottom function. The chain rule brings also the concept of backward computation. A backward computation is evaluating gradient from output to inputs. The backward method will apply on graph detained by executor. We obtain at end of the gradient with respect to inputs variable. As example, we compute the gradient of <span class="math inline">\(y=2x\)</span> at <span class="math inline">\(x=3\)</span>. We define the symbolic expression as:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb11-1"><a href="#cb11-1"></a><span class="kw">using</span> MXNet</span>
+<span id="cb11-2"><a href="#cb11-2"></a>x<span class="op">=</span>mx.Variable(<span class="op">:</span>x)</span>
+<span id="cb11-3"><a href="#cb11-3"></a>y<span class="op">=</span><span class="fl">2</span> <span class="op">.*</span> x</span></code></pre></div>
+<p>We link the symbol <code>:x</code> to the numerical value 3.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb12-1"><a href="#cb12-1"></a>args<span class="op">=</span><span class="dt">Dict</span>(<span class="op">:</span>x <span class="op">=&gt;</span> mx.NDArray([<span class="fl">3</span>]))</span></code></pre></div>
+<p>This time, we need to define a dictionary indicating the independent variable. The only independent variable is x. We define a dictionary by following code:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb13-1"><a href="#cb13-1"></a>args_grad<span class="op">=</span><span class="dt">Dict</span>(<span class="op">:</span>x <span class="op">=&gt;</span> mx.NDArray([<span class="fl">0</span>]))</span></code></pre></div>
+<p>The array requires no special initialization. Therefore, the array contains only one zero. The array will receive the derivative of y with respect to x. We bind the symbolic variable to its numerical values by calling an appropriate method. As previously stated, the function returns an executor.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb14-1"><a href="#cb14-1"></a>executor<span class="op">=</span>mx.bind(y<span class="op">,</span>mx.cpu()<span class="op">,</span>args<span class="op">;</span>args_grad<span class="op">=</span>args_grad)</span></code></pre></div>
+<p>Julia programming language defines a type of args_grad as named argument. The three first argument are imperatives. A semi-colon makes the separation between mandatory arguments and named arguments. Each argument after the semi-colon will generate an error without the name of argument. Even if we compute gradient, it requires to computing the output first. We have to call <code>forward</code> function. This time, we will set <code>is_train=true</code> to keep record of intermediary values before performing the backward evaluation of gradient.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb15-1"><a href="#cb15-1"></a>outs<span class="op">=</span>mx.forward(executor<span class="op">,</span>is_train<span class="op">=</span><span class="ex">true</span>)</span></code></pre></div>
+<p>Then we call <code>backward</code> method to compute gradient. We give to backward method the executor and the derivative of output with respect to itself as arguments. The derivative of output with respect to itself is obviously a matrix that all elements are equal to one.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb16-1"><a href="#cb16-1"></a>mx.backward(executor<span class="op">,</span>mx.ones_like(outs[<span class="fl">1</span>]))</span></code></pre></div>
+<p>The backward function computes an element wise product of gradient and second argument of backward function. The second argument has the same shape as the output of function <code>forward</code>. The function <code>mx.ones_like</code> creates an array containing one with the same shape as its argument.</p>
+<p>The function backward attaches an array of gradients to executor. Because we provided only one independent variable, the array of gradients contains only one element. We can verify on screen the value of array of gradients:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb17-1"><a href="#cb17-1"></a>println(executor.grad_arrays)</span></code></pre></div>
+<h2 id="finding-a-minimum-of-scalar-quadratic-function">Finding a Minimum of Scalar Quadratic Function</h2>
+<p>A gradient descent is the method of choice in modern machine learning for minimizing a function. We compute a minimum by successively applying a gradient descent. The gradient descent is given by:</p>
+<p><span class="math inline">\(x_{k+1} = x_k- \lambda \left(\frac{\partial f}{\partial x}\right)_{x=x_k}\)</span></p>
+<p>We call <span class="math inline">\(\lambda\)</span> learning rate. <span class="math inline">\(\lambda\)</span> is superior to zero.We can verify that gradient descent find a minimum of a function. For a small variation, <span class="math inline">\(f(x_{k+1})\)</span> can be written as</p>
+<p><span class="math inline">\(f(x_{k+1})= f(x_k)+\left(\frac{\partial f}{\partial x}\right)_{x=x_k}^T (x_{k+1}-x_{k})\)</span></p>
+<p>We can rewrite a gradient descent like this:</p>
+<p><span class="math inline">\(x_{k+1} - x_k= \lambda \left(\frac{\partial f}{\partial x}\right)_{x=x_k}\)</span></p>
+<p>By substituting <span class="math inline">\((x_{k+1}-x_k)\)</span> in right side of <span class="math inline">\(f(x_{k+1})\)</span>, we obtain</p>
+<p><span class="math inline">\(f(x_{k+1})= f(x_k)- \lambda \left(\frac{\partial f}{\partial x}\right)_{x=x_k}^T \left(\frac{\partial f}{\partial x}\right)_{x=x_k}\)</span></p>
+<p>The second term of right side is positive or equal to zero.</p>
+<p><span class="math inline">\(\left(\frac{\partial f}{\partial x}\right)_{x=x_k}^T \left(\frac{\partial f}{\partial x}\right)_{x=x_k} =\left\|\left(\frac{\partial f}{\partial x}\right)_{x=x_k}\right\|_2^2\geq 0\)</span></p>
+<p>As result, the difference between <span class="math inline">\(f(x_{k+1})\)</span> and <span class="math inline">\(f(x_{k})\)</span> will be inferior or equal to zero.</p>
+<p><span class="math inline">\(- \lambda \left(\frac{\partial f}{\partial x}\right)_{x=x_k}^T \left(\frac{\partial f}{\partial x}\right)_{x=x_k}=f(x_{k+1})- f(x_k)\leq 0\)</span></p>
+<p><span class="math inline">\(f(x_{k+1})\)</span> will be inferior or equal to <span class="math inline">\(f(x_k)\)</span>.</p>
+<p><span class="math inline">\(f(x_{k+1}) \leq f(x_k)\)</span></p>
+<p>The previous statement is true only if <span class="math inline">\(\left\|x_{k+1}-x_{k}\right\|_2\)</span> stays very small. Therefore, we must choose wisely the value of <span class="math inline">\(\lambda\)</span>. At the minimum,</p>
+<p><span class="math inline">\(\left(\frac{\partial f}{\partial x}\right)_{x=x_m}=0\)</span></p>
+<p><span class="math inline">\(x_m\)</span> will be the value that minimize <span class="math inline">\(f(x)\)</span>. <span class="math inline">\(f(x_m)\)</span> is the minimum of the function <span class="math inline">\(f(x)\)</span>. Actually, the minimum can be inaccessible. We have to find the stop criteria.</p>
+<p>The first step, we define the computation graph.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb18-1"><a href="#cb18-1"></a><span class="kw">using</span> MXNet</span>
+<span id="cb18-2"><a href="#cb18-2"></a></span>
+<span id="cb18-3"><a href="#cb18-3"></a>x<span class="op">=</span>mx.Variable(<span class="op">:</span>x)</span>
+<span id="cb18-4"><a href="#cb18-4"></a></span>
+<span id="cb18-5"><a href="#cb18-5"></a>y<span class="op">=</span>x <span class="op">.^</span> <span class="fl">2</span> <span class="op">+</span> <span class="fl">2</span> <span class="op">.*</span> x .<span class="op">+</span> <span class="fl">1</span></span></code></pre></div>
+<p>The second step is to create the executor. We define the dictionaries that link symbolic nodes, numerical values,and independent variables. We have only one independent variable that we bind its numerical to computational graph.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb19-1"><a href="#cb19-1"></a>args<span class="op">=</span><span class="dt">Dict</span>(<span class="op">:</span>x <span class="op">=&gt;</span> mx.zeros(<span class="fl">1</span>))</span>
+<span id="cb19-2"><a href="#cb19-2"></a></span>
+<span id="cb19-3"><a href="#cb19-3"></a>args_grad<span class="op">=</span><span class="dt">Dict</span>(<span class="op">:</span>x <span class="op">=&gt;</span> mx.zeros(<span class="fl">1</span>))</span>
+<span id="cb19-4"><a href="#cb19-4"></a></span>
+<span id="cb19-5"><a href="#cb19-5"></a>executor<span class="op">=</span>mx.bind(y<span class="op">,</span>mx.cpu()<span class="op">,</span>args<span class="op">;</span>args_grad<span class="op">=</span>args_grad)</span></code></pre></div>
+<p>The function <code>mx.zeros</code> creates an array containing all elements equal to zero.</p>
+<p>The third step is a loop in which we perform forward computation, backward computation, and to update the value of x. We begin by the forward computation:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb20-1"><a href="#cb20-1"></a>outs<span class="op">=</span>mx.forward(executor<span class="op">,</span>is_train<span class="op">=</span><span class="ex">true</span>)</span></code></pre></div>
+<p>We make backward computation by passing also matrix with the same shape as the last output but all elements equal to one:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb21-1"><a href="#cb21-1"></a>mx.backward(executor<span class="op">,</span>mx.ones_like(outs[<span class="fl">1</span>]))</span></code></pre></div>
+<p>We can now collect the value of gradient of output with respect to x.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb22-1"><a href="#cb22-1"></a>x_grad<span class="op">=</span>executor.grad_arrays[<span class="fl">1</span>]</span></code></pre></div>
+<p>We use a special method that subtract the numerical value bound to variable <code>:x</code>. This method does not create a new array. The method simply modifies the existing array. The method performs the subtraction in existing array.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb23-1"><a href="#cb23-1"></a>mx.sub_from<span class="op">!</span>(executor.arg_dict[<span class="op">:</span>x]<span class="op">,</span> <span class="fl">0.1</span> <span class="op">.*</span>  x_grad)</span></code></pre></div>
+<p>We can print the new value of x.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb24-1"><a href="#cb24-1"></a>println(<span class="st">&quot;x=&quot;</span><span class="op">,</span>executor.arg_dict[<span class="op">:</span>x])</span></code></pre></div>
+<p>We put all together in the loop. the code look like that:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode julia"><code class="sourceCode julia"><span id="cb25-1"><a href="#cb25-1"></a><span class="kw">for</span> i<span class="op">=</span><span class="fl">1</span><span class="op">:</span><span class="fl">100</span></span>
+<span id="cb25-2"><a href="#cb25-2"></a>    outs<span class="op">=</span>mx.forward(executor<span class="op">,</span>is_train<span class="op">=</span><span class="ex">true</span>)</span>
+<span id="cb25-3"><a href="#cb25-3"></a>    mx.backward(executor<span class="op">,</span>mx.ones_like(outs[<span class="fl">1</span>]))</span>
+<span id="cb25-4"><a href="#cb25-4"></a>    x_grad<span class="op">=</span>executor.grad_arrays[<span class="fl">1</span>]</span>
+<span id="cb25-5"><a href="#cb25-5"></a>    mx.sub_from<span class="op">!</span>(executor.arg_dict[<span class="op">:</span>x]<span class="op">,</span> <span class="fl">0.1</span> <span class="op">.*</span>  x_grad)</span>
+<span id="cb25-6"><a href="#cb25-6"></a>    println(<span class="st">&quot;x=&quot;</span><span class="op">,</span>executor.arg_dict[<span class="op">:</span>x])</span>
+<span id="cb25-7"><a href="#cb25-7"></a><span class="kw">end</span></span></code></pre></div>
+<p>The final line of screen looks like that:</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb26-1"><a href="#cb26-1"></a><span class="va">x=</span>NDArray<span class="va">(</span>Float32<span class="va">[-0.9999999])</span></span></code></pre></div>
+</body>
+</html>
